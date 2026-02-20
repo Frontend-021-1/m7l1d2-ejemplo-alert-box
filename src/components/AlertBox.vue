@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
 import { Icon } from '@iconify/vue';
 
 const props = defineProps({
@@ -21,6 +22,14 @@ const alertIcon = () => {
       return 'lucide:info'
   }
 }
+
+onMounted(() => {
+  console.log('Se monta componente AlertBox')
+})
+
+onUnmounted(() => {
+  console.log('Se desmonta componente AlertBox')
+})
 </script>
 
 <template>
